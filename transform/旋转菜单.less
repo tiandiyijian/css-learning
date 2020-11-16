@@ -1,0 +1,119 @@
+@deg: 40deg;
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  background: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+nav {
+  width: 200px;
+  height: 200px;
+  background: #d35400;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "NAV";
+    color: aliceblue;
+    font-size: 3em;
+  }
+
+  &:hover ul {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  ul {
+    width: 300px;
+    height: 300px;
+    // border: 1px solid black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .5s;
+    z-index: -1;
+    li {
+      width: 80px;
+      height: 80px;
+      background: #d35400;
+      position: absolute;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: aliceblue;
+      transform-origin: 150px 150px;
+      transition: 1s;
+    }
+  }
+
+  &:hover ul>li {
+    &:nth-child(1) {
+      transform: rotate(@deg * 1);
+    }
+    &:nth-child(2) {
+      transform: rotate(@deg * 2);
+    }
+    &:nth-child(3) {
+      transform: rotate(@deg * 3);
+    }
+    &:nth-child(4) {
+      transform: rotate(@deg * 4);
+    }
+    &:nth-child(5) {
+      transform: rotate(@deg * 5);
+    }
+    &:nth-child(6) {
+      transform: rotate(@deg * 6);
+    }
+    &:nth-child(7) {
+      transform: rotate(@deg * 7);
+    }
+    &:nth-child(8) {
+      transform: rotate(@deg * 8);
+    }
+    &:nth-child(9) {
+      transform: rotate(@deg * 9);
+    }
+    &:nth-child(1) span {
+      transform: rotate(-@deg);
+    }
+    &:nth-child(2) span {
+      transform: rotate(-@deg * 2);
+    }
+    &:nth-child(3) span {
+      transform: rotate(-@deg * 3);
+    }
+    &:nth-child(4) span {
+      transform: rotate(-@deg * 4);
+    }
+    &:nth-child(5) span {
+      transform: rotate(-@deg * 5);
+    }
+    &:nth-child(6) span {
+      transform: rotate(-@deg * 6);
+    }
+    &:nth-child(7) span {
+      transform: rotate(-@deg * 7);
+    }
+    &:nth-child(8) span {
+      transform: rotate(-@deg * 8);
+    }
+    &:nth-child(9) span {
+      transform: rotate(-@deg * 9);
+    }
+  }
+}

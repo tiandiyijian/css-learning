@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body {
+  background: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+nav {
+  width: 200px;
+  height: 200px;
+  background: #d35400;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav::before {
+  content: "NAV";
+  color: aliceblue;
+  font-size: 3em;
+}
+nav:hover ul {
+  transform: translate(-50%, -50%) scale(1);
+}
+nav ul {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.5s;
+  z-index: -1;
+}
+nav ul li {
+  width: 80px;
+  height: 80px;
+  background: #d35400;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  transform-origin: 150px 150px;
+  transition: 1s;
+}
+nav:hover ul > li:nth-child(1) {
+  transform: rotate(40deg);
+}
+nav:hover ul > li:nth-child(2) {
+  transform: rotate(80deg);
+}
+nav:hover ul > li:nth-child(3) {
+  transform: rotate(120deg);
+}
+nav:hover ul > li:nth-child(4) {
+  transform: rotate(160deg);
+}
+nav:hover ul > li:nth-child(5) {
+  transform: rotate(200deg);
+}
+nav:hover ul > li:nth-child(6) {
+  transform: rotate(240deg);
+}
+nav:hover ul > li:nth-child(7) {
+  transform: rotate(280deg);
+}
+nav:hover ul > li:nth-child(8) {
+  transform: rotate(320deg);
+}
+nav:hover ul > li:nth-child(9) {
+  transform: rotate(360deg);
+}
+nav:hover ul > li:nth-child(1) span {
+  transform: rotate(-40deg);
+}
+nav:hover ul > li:nth-child(2) span {
+  transform: rotate(-80deg);
+}
+nav:hover ul > li:nth-child(3) span {
+  transform: rotate(-120deg);
+}
+nav:hover ul > li:nth-child(4) span {
+  transform: rotate(-160deg);
+}
+nav:hover ul > li:nth-child(5) span {
+  transform: rotate(-200deg);
+}
+nav:hover ul > li:nth-child(6) span {
+  transform: rotate(-240deg);
+}
+nav:hover ul > li:nth-child(7) span {
+  transform: rotate(-280deg);
+}
+nav:hover ul > li:nth-child(8) span {
+  transform: rotate(-320deg);
+}
+nav:hover ul > li:nth-child(9) span {
+  transform: rotate(-360deg);
+}
