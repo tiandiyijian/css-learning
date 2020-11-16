@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        footer {
+            display: flex;
+            background: blueviolet;
+            height: 300px;
+            width: 100px;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+            /* overflow: scroll; */
+            /* align-items: flex-start; */
+            align-content: space-around;
+        }
+
+        footer div {
+            /* width: 100px; */
+            /* flex-basis: 100px; */
+            
+            height: 100px;
+            background: red;
+            font-size: 25px;
+            padding: 10px;
+            background-clip: padding-box;
+            box-sizing: border-box;
+            border: 1px solid silver;
+            margin: 0 10px;
+        }
+
+        footer :first-child {
+            flex: 0 0 200px;
+        }
+
+        /* div:last-child {
+            flex-grow: 1;
+            background: blue;
+        } */
+    </style>
+</head>
+<body>
+    <footer>
+        <div>a</div>
+        <div>b</div>
+        <div>c</div>
+        <div>d</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        main>ul {
+            list-style: none;
+            display: flex;
+            text-transform: uppercase;
+        }
+
+        main>ul>li {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        main>ul>li:hover strong+div {
+            transform: scale(1);
+        }
+
+        main>ul strong {
+            background-color: aquamarine;
+        }
+
+        main>ul strong+div {
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            transform: scale(0);
+            transition: 0.5s;
+            transform-origin: left top;
+        }
+
+        main>ul strong+div a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <ul>
+            <li>
+                <strong>video</strong>
+                <div>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                </div>
+            </li>
+
+            <li>
+                <strong>live</strong>
+                <div>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                </div>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>

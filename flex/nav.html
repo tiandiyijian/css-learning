@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            width: 100vw;
+            height: 50px;
+            background: #3498db;
+            display: flex;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul:first-child {
+            /* margin-right: auto; */
+            /* justify-content: space-around; */
+            color: whitesmoke;
+        }
+
+        nav ul:first-child li {
+            margin: 0 10px;
+        }
+
+        nav ul:last-child {
+            flex: 1;
+            /* justify-content: flex-end; */
+            flex-direction: row-reverse;
+        }
+
+        nav ul:last-child li {
+            background: #2ecc71;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>333</li>
+            <li>666</li>
+        </ul>
+        <ul>
+            <li></li>
+        </ul>
+    </nav>
+</body>
+</html>

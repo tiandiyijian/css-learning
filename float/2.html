@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            border: 2px red solid;
+        }
+
+        /* main::after {
+            content: "";
+            clear: both;
+            display: block;
+        } */
+
+        main section {
+            float: left;
+            background: green;
+            width: 50px;
+            height: 50px;
+            border: 2px black solid;
+            /* clip-path: circle(30%); */
+            padding: 5px;
+            /* shape-outside: circle(30%); */
+        }
+
+        main div {
+            width: 50px;
+            height: 50px;
+            background: red;
+            clear: both;
+        }
+
+        main p {
+            background: yellowgreen;
+            font-size: 5px;
+            /* clear: both; */
+        }
+
+        main p::after {
+            content: "";
+            display: block;
+            clear: both;
+            /* height: 0;
+            visibility: hidden; */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section></section>
+        <!-- <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, non. Repellendus adipisci qui repellat. Libero illum unde reprehenderit, soluta necessitatibus sint exercitationem veritatis sit incidunt magnam commodi nesciunt ab velit!</span> -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dignissimos laboriosam accusamus autem quidem, obcaecati ad quas libero tempora dolorum accusantium corrupti enim odio magnam corporis possimus. Quae, quidem similique!</p>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            position: relative;
+        }
+        
+        main::before {
+            content: 'LYX';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: .5;
+        }
+
+        main>div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            /* background: #000; */
+            transform: translateY(-100%);
+            transition: 0.5s;
+        }
+
+        /* 关键在于通过对target伪类的控制来实现 */
+        main>div:target {
+            transform: translateY(0);
+        }
+
+        main>div:nth-child(1):target {
+            background: red;
+        }
+        main>div:nth-child(2):target {
+            background: green;
+        }
+        main>div:nth-child(3):target {
+            background: blueviolet;
+        }
+
+        nav {
+            height: 8vh;
+            background: gray;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            flex: 1;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        nav a:nth-child(2) {
+            border-left: 2px solid silver;
+            border-right: 2px solid silver;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="home"></div>
+        <div id="video"></div>
+        <div id="live"></div>
+    </main>
+    <nav>
+        <a href="#home">home</a>
+        <a href="#video">video</a>
+        <a href="#live">live</a>
+    </nav>
+</body>
+</html>

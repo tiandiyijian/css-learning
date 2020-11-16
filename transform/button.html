@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: gray;
+        }
+
+        main {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            border: 2px red solid;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            position: relative;
+            height: 55px;
+            font-size: 1.5em;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            background: red;
+            height: 100%;
+            width: 0;
+            position: absolute;
+            z-index: -1;
+            transform: skew(45deg);
+            transition: .3s;
+        }
+
+        .btn:hover::after {
+            width: 200%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="" class="btn">
+            LY
+        </a>
+    </main>
+</body>
+</html>

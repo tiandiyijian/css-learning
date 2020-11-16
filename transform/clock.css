@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: darkgray;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.clock {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+main div.clock div.bar {
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main div.clock div.bar:nth-child(2) {
+  transform: translateX(-50%) rotate(30deg);
+}
+main div.clock div.bar:nth-child(3) {
+  transform: translateX(-50%) rotate(60deg);
+}
+main div.clock div.bar:nth-child(4) {
+  transform: translateX(-50%) rotate(90deg);
+}
+main div.clock div.bar:nth-child(5) {
+  transform: translateX(-50%) rotate(120deg);
+}
+main div.clock div.bar:nth-child(6) {
+  transform: translateX(-50%) rotate(150deg);
+}
+main div.clock div.dial {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 95%;
+  height: 95%;
+  background: black;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+main div.clock div.dial::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+main div.clock div.dial:hover .second {
+  transform: rotate(300deg);
+  transition: 1s;
+}
+main div.clock div.dial div {
+  background: white;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+}
+main div.clock div.dial div.minute {
+  width: 8px;
+  height: 30%;
+  transform-origin: bottom;
+  transform: rotate(30deg) translate(-50%);
+}
+main div.clock div.dial div.hour {
+  width: 10px;
+  height: 20%;
+  transform-origin: bottom;
+  transform: translate(-50%);
+}
+main div.clock div.dial div.second {
+  width: 5px;
+  height: 40%;
+  transform-origin: bottom;
+  transform: rotate(90deg) translate(-50%);
+}
