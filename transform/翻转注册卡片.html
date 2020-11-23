@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            /* display: flex; */
+            position: relative;
+        }
+
+        div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            transition: 1s;
+        }
+
+        div:nth-child(1) {
+            transform: rotateY(180deg);
+            background: red;
+        }
+
+        div:nth-child(2) {
+            background: blueviolet;
+        }
+
+        div:nth-child(1):target {
+            transform: rotateY(0);
+        }
+
+        div:nth-child(1):target + div{
+            transform: rotateY(180deg);
+        }
+
+        nav {
+            position: absolute;
+            bottom: 200px;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        nav div {
+            background: blue;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background: darkcyan;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        /* main>div:nth-child(1):target {
+            transform: rotate(0);
+        } */
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="login">LOGIN</div>
+        <div id="register">REGISTER</div>
+    </main>
+    <nav>
+        <a href="#login">登录</a>
+        <a href="#register">注册</a>
+    </nav>
+</body>
+
+</html>
